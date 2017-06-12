@@ -13,6 +13,7 @@ h2 {
 	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 3.236rem;
+	font-family: 'proxima_nova_altbold';
 }
 h2::after {
 	content: '____';

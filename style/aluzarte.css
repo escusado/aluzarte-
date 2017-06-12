@@ -36,8 +36,11 @@ p {
 }
 
 .slogan {
+	text-align: right;
 	padding: 1rem 0;
-	font-size: 3.236rem;
+	font-size: 5.236rem;
+	line-height: 1;
+	color: #2b3a45;
 	font-weight: 100;
 	font-family: 'proxima_nova_ltthin';
 }

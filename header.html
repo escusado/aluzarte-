@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+      html, body{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .intro-container {
+        width: 100%;
+        background-color: red;
+        position: relative;
+        padding-top: 56.25%;
+      }
+
+      .intro-container video{
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      .intro-container .content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+
+      }
+
+      .intro-container .play-video {
+        position: absolute;
+        width: 100px;
+        top: 80%;
+        left: 50%;
+        margin-left: -50px;
+        padding: 10px;
+
+        border: 3px solid white;
+        border-radius: 5px;
+
+
+        font-weight: bold;
+        color: #FFFFFF;
+
+        cursor: pointer;
+        transition: background-color .2s;
+      }
+
+      .intro-container .play-video:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .intro-container .content .aluzarte-logo {
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+
+        background-image: url("aluzarte-logo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="intro-container">
+      <video autoplay muted class="intro-video">
+        <source src="intro.mp4" type="video/mp4">
+          controles
+      </video>
+      <div class="content">
+
+        <div class="aluzarte-logo">
+
+        </div>
+
+        <div class="play-video" onclick="console.log('asdf');var video = document.querySelector('.intro-video');video.currentTime = 0;video.controls = true;video.muted = false;video.style.zIndex = 3;">
+          VER VIDEO
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -147,13 +147,11 @@ html, body, .intro{
 .team-container {
   display: flex;
   width: 100%;
-  background-color: #121B20;
 }
 
 .team-container .member {
   color: #FFFFFF;
   flex: 2;
-  padding: 50px;
 }
 
 .team-container .member .photo {

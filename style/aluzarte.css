@@ -69,14 +69,13 @@ p {
 
 /*HEADER*/
 html, body, .intro{
-  width: 100%;  
+  width: 100%;
   padding: 0;
   margin: 0;
 }
 
 .intro-container {
   width: 100%;
-  background-color: red;
   position: relative;
   padding-top: 56.25%;
 

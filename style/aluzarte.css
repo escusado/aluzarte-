@@ -146,12 +146,24 @@ html, body, .intro{
 
 .team-container {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .team-container .member {
   color: #FFFFFF;
   flex: 2;
+  padding : 20px;
+  min-width: 300px;
+}
+
+.team-container .member h5 {
+  font-family: 'proxima_nova_ltthin';
+  color: rgba(255,255,255,.5);
+}
+
+.team-container .member p {
+  font-size: 0.8em;
 }
 
 .team-container .member .photo {

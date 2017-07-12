@@ -30,7 +30,7 @@ var onDomReady = function onDomReady() {
     slidesToScroll: 3
   });
 
-  $('team-container').html(window.personitas.map(member => `
+  $('.team-container').html(window.personitas.map(member => `
     <div class="member">
       <div class="photo" style="background-image:url('team/${member.slug}.png')"></div>
       <div class="content">
@@ -40,6 +40,8 @@ var onDomReady = function onDomReady() {
       </div>
     </div>
   `).join(''));
+
+  console.log('>>>>', personitas);
 
 };
 

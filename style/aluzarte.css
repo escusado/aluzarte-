@@ -1,6 +1,8 @@
 /* config */
 body {
 	font-family: 'Proxima Nova';
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -162,4 +164,13 @@ html, body, .intro{
   background-size: cover;
   float: left;
   margin: 0 20px 10px 0;
+}
+
+.image-gallery {
+}
+.image-gallery-el {
+  padding-right: 1rem;
+}
+.image-gallery-el:last-child {
+  padding-right: 0;
 }

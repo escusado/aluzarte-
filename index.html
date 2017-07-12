@@ -24,14 +24,27 @@
     <link rel="stylesheet" href="style/proxima-nova/fonts.min.css">
   </head>
   <body>
-		<div class="section section-header">
-			<div class="section_content">
-				<h1>
-					Aluzarte
-				</h1>
-				<h3>
-					Arte en prisión
-				</h3>
+		<div class="section section-header intro">
+			<div class="section_content intro">
+
+        <div class="intro-container">
+          <video autoplay muted class="intro-video">
+            <source src="intro.mp4" type="video/mp4">
+              controles
+          </video>
+          <div class="content">
+
+            <div class="aluzarte-logo">
+
+            </div>
+
+            <div class="play-video" onclick="console.log('asdf');var video = document.querySelector('.intro-video');video.currentTime = 0;video.controls = true;video.muted = false;video.style.zIndex = 3;">
+              VER VIDEO
+            </div>
+
+          </div>
+        </div>
+
 			</div><!-- /section-content -->
 		</div><!-- /section -->
 

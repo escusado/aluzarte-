@@ -109,19 +109,19 @@ window.obra = [
  },
  {
    "title" : "SICKNISS...",
-   "slug" : "sickniss",
+   "slug" : "sickness",
    "data":"Se reserva descripción.",
    "author":"NERI MARISOL CAMACHO SANDOVAL"
  },
  {
    "title" : "FAR-FETCHED DIMENTIONS",
-   "slug" : "far-fetched-dimentions",
+   "slug" : "far-fetched-dimensions",
    "data":"Nada es como parece. Aunque lo desconocido puede parecer completamente nuevo, siempre está compuesto, al menos, de algo conocido.",
    "author":"SAMANTHA GARNER"
  },
  {
    "title" : "SIN TÍTULO",
-   "slug" : "sin-titulo",
+   "slug" : "atardeceres",
    "data":"Los atardeceres y amaneceres perdidos sin mis hijos.",
    "author":"ROSA MARÍA ISABEL PÉREZ PALACIOS"
  },

@@ -50,3 +50,19 @@ if (document.readyState != 'loading'){
   document.addEventListener('DOMContentLoaded', onDomReady);
 }
 console.log('wat');
+
+const playIntroVideo = function(){
+  var videoEl = $('.intro-video');
+  videoEl.prop('currentTime', 0);
+  videoEl.prop('controls', true);
+  videoEl.css('z-index', 3);
+
+  videoEl.find('source').attr('src', 'intro.mp4');
+  videoEl[0].load();
+
+  setTimeout(function(){
+    videoEl[0].muted = false;
+  },0);
+
+  console.log('sup');
+};

@@ -21,17 +21,6 @@ var onDomReady = function onDomReady() {
     slidesToShow: 4,
     slidesToScroll: 3
   });
-
-  $('.team-container').html(window.personitas.map(member => `
-    <div class="member">
-      <div class="photo" style="background-image:url('team/${member.slug}.png')"></div>
-      <div class="content">
-        <h4>${member.name}</h4>
-        <h5>${member.position}</h5>
-        <p>${member.info}</p>
-      </div>
-    </div>
-  `).join(''));
 };
 
 //on dom ready

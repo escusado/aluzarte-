@@ -181,5 +181,23 @@
       </div>
     </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+  <script>
+    axios.get("http://go.javier.xyz:7908/personitas.json").then(res => {
+      console.log(res.data)
+
+      $('.team-container').html(res.data.map(member => `
+        <div class="member">
+          <div class="photo" style="background-image:url('${member.image.url}')"></div>
+          <div class="content">
+            <h4>${member.name}</h4>
+            <p>${member.bio}</p>
+          </div>
+        </div>
+      `).join(''));
+    })
+  </script>
+
   </body>
 </html>

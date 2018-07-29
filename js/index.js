@@ -3,27 +3,6 @@ var onDomReady = function onDomReady() {
   var rellax = new Rellax('.rellax');
   $('.intro-video').html('<source src="loop.mp4" type="video/mp4">');
 
-  const imageGalleryEl = document.querySelector('.image-gallery');
-
-  imageGalleryEl.innerHTML = window.obra.map(obra => `
-    <div class="image-gallery-el">
-      <img src="obra/${obra.slug}.png" />
-
-      <div class="image-gallery-el_title">
-        ${obra.title}
-      </div>
-
-      <div class="image-gallery-el_data">
-        ${obra.data}
-      </div>
-
-      <div class="image-gallery-el_author">
-        ${obra.author}
-      </div>
-    </div>
-  `).join('');
-
-
   document.querySelector('.gallery-wall .masonry-container').innerHTML = window.obra.sort(()=>Math.round(Math.random())).map(obra => `
     <div class="gallery-item">
       <div class="thumb">

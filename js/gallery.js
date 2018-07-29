@@ -12,7 +12,9 @@ class Gallery {
     this.closeEl.addEventListener('click', this.hide.bind(this));
   }
 
-  show() {
+  show(galleryData) {
+    this.buildGallery(galleryData);
+
     this.lightboxEl.classList.add('enabled');
     this.galleryEl.classList.add('enabled');
     this.masonry.layout();

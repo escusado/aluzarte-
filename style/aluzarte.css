@@ -3,6 +3,7 @@ body {
 	font-family: 'Proxima Nova';
   width: 100vw;
   overflow-x: hidden;
+  position: fixed;
 }
 
 h1 {
@@ -183,4 +184,74 @@ html, body, .intro{
 }
 .image-gallery-el:last-child {
   padding-right: 0;
+}
+
+.web-content,
+.lightbox,
+.gallery-wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.web-content {
+  overflow-y: auto;
+}
+
+.lightbox {
+  background-color: rgba(0,0,0,.8);
+  box-shadow: inset 0 0 0 1px red;
+  top: -100vh;
+}
+
+.lightbox.enabled,
+.gallery-wall.enabled {
+  top: 0;
+}
+
+.gallery-wall {
+  overflow-y: scroll;
+  top: -100vh;
+}
+
+.gallery-wall .close {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: red;
+  float: right;
+}
+
+.gallery-wall .masonry-container {
+  width: 960px;
+  margin: auto;
+}
+
+.gallery-wall .gallery-item {
+  width: 300px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.5);
+  margin: 10px;
+  padding: 10px;
+}
+
+.gallery-wall .gallery-item .thumb img {
+  box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+}
+
+.gallery-wall .gallery-item .title {
+  font-size: 14px;
+}
+
+.gallery-wall .gallery-item .meta {
+  font-size: 10px;
+  color: rgba(0,0,0,.5);
+}
+
+.gallery-preview {
+  border: 1px solid red;
+  background-color: rgba(0,0,255,.5);
+  cursor: pointer;
 }

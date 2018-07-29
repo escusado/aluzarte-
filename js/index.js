@@ -1,7 +1,6 @@
 
 var onDomReady = function onDomReady() {
   var rellax = new Rellax('.rellax');
-
   $('.intro-video').html('<source src="loop.mp4" type="video/mp4">');
 
   const imageGalleryEl = document.querySelector('.image-gallery');
@@ -24,6 +23,20 @@ var onDomReady = function onDomReady() {
     </div>
   `).join('');
 
+
+  document.querySelector('.gallery-wall .masonry-container').innerHTML = window.obra.sort(()=>Math.round(Math.random())).map(obra => `
+    <div class="gallery-item">
+      <div class="thumb">
+        <img src="obra/${obra.slug}.png" />
+      </div>
+      <div class="data">
+        <div class="title">${obra.title}</div>
+        <div class="meta">Autor: ${obra.author}</div>
+      </div>
+    </div>
+  `).join('');
+  window.gallery = new Gallery();
+
   $('.image-gallery').slick({
     infinite: true,
     slidesToShow: 4,
@@ -40,9 +53,6 @@ var onDomReady = function onDomReady() {
       </div>
     </div>
   `).join(''));
-
-  console.log('>>>>', personitas);
-
 };
 
 //on dom ready
@@ -51,7 +61,6 @@ if (document.readyState != 'loading'){
 } else {
   document.addEventListener('DOMContentLoaded', onDomReady);
 }
-console.log('wat');
 
 const playIntroVideo = function(){
   var videoEl = $('.intro-video');
@@ -65,6 +74,4 @@ const playIntroVideo = function(){
   setTimeout(function(){
     videoEl[0].muted = false;
   },0);
-
-  console.log('sup');
 };

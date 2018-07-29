@@ -196,6 +196,8 @@ html, body, .intro{
   background-color: black;
   background-blend-mode: luminosity;
   transition: background-color .2s linear;
+  background-size: cover;
+  background-position: center center;
 }
 
 .gallery-section .galleries .gallery-item:hover{

@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
@@ -162,37 +162,9 @@
     <div class="gallery-wall">
       <div class="close"></div>
       <div class="masonry-container">
-
-        <!-- <div class="gallery-item">
-          <div class="thumb">
-            <img src="obra/3-montanas.png" alt="">
-          </div>
-          <div class="data">
-            <div class="title">3 Montañas</div>
-            <div class="meta">Autor: Someone</div>
-          </div>
-        </div> -->
-
+        <!-- rendered pieces -->
       </div>
     </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-
-  <script>
-    axios.get("http://go.javier.xyz:7908/personitas.json").then(res => {
-      console.log(res.data)
-
-      $('.team-container').html(res.data.map(member => `
-        <div class="member">
-          <div class="photo" style="background-image:url('${member.image.url}')"></div>
-          <div class="content">
-            <h4>${member.name}</h4>
-            <p>${member.bio}</p>
-          </div>
-        </div>
-      `).join(''));
-    })
-  </script>
 
   </body>
 </html>

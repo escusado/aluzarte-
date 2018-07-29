@@ -3,27 +3,32 @@ var onDomReady = function onDomReady() {
   var rellax = new Rellax('.rellax');
   $('.intro-video').html('<source src="loop.mp4" type="video/mp4">');
 
-  window.galeries.map((gallery) => {
-    let galleryEl = $(`<div class="gallery-item" style="background-image:url(obra/amar-sin-limites.png);">
-                        <div class="title">${gallery.name}</div>
-                      </div>`);
-    galleryEl.click((ev)=>{
-      window.gallery.show(gallery.images.slice(0));
-    });
-    $('.gallery-section .galleries').append(galleryEl);
-  }).join('');
+  axios.get("http://go.javier.xyz:7908/personitas.json").then(res => {
+    console.log(res.data)
 
-  document.querySelector('.gallery-wall .masonry-container').innerHTML = window.obra.sort(()=>Math.round(Math.random())).map(obra => `
-    <div class="gallery-item">
-      <div class="thumb">
-        <img src="obra/${obra.slug}.png" />
+    $('.team-container').html(res.data.map(member => `
+      <div class="member">
+        <div class="photo" style="background-image:url('${member.image.url}')"></div>
+        <div class="content">
+          <h4>${member.name}</h4>
+          <p>${member.bio}</p>
+        </div>
       </div>
-      <div class="data">
-        <div class="title">${obra.title}</div>
-        <div class="meta">Autor: ${obra.author}</div>
-      </div>
-    </div>
-  `).join('');
+    `).join(''));
+  });
+
+  axios.get("http://go.javier.xyz:7908/gallery.json").then(res => {
+    window.galeries.map((gallery) => {
+      let galleryEl = $(`<div class="gallery-item" style="background-image:url(${gallery.thumbnail.url});">
+                          <div class="title">${gallery.name}</div>
+                        </div>`);
+      galleryEl.click((ev)=>{
+        window.gallery.show(gallery.images.slice(0));
+      });
+      $('.gallery-section .galleries').append(galleryEl);
+    }).join('');
+  });
+
   window.gallery = new Gallery();
 
   $('.image-gallery').slick({

@@ -3,6 +3,16 @@ var onDomReady = function onDomReady() {
   var rellax = new Rellax('.rellax');
   $('.intro-video').html('<source src="loop.mp4" type="video/mp4">');
 
+  window.galeries.map((gallery) => {
+    let galleryEl = $(`<div class="gallery-item" style="background-image:url(obra/amar-sin-limites.png);">
+                        <div class="title">${gallery.name}</div>
+                      </div>`);
+    galleryEl.click((ev)=>{
+      window.gallery.show(gallery.images.slice(0));
+    });
+    $('.gallery-section .galleries').append(galleryEl);
+  }).join('');
+
   document.querySelector('.gallery-wall .masonry-container').innerHTML = window.obra.sort(()=>Math.round(Math.random())).map(obra => `
     <div class="gallery-item">
       <div class="thumb">

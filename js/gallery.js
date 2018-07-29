@@ -17,7 +17,30 @@ class Gallery {
 
     this.lightboxEl.classList.add('enabled');
     this.galleryEl.classList.add('enabled');
+    this.masonry.reloadItems();
     this.masonry.layout();
+  }
+
+  buildGallery (galleryData) {
+    while (this.masonryEl.firstChild) {
+      this.masonryEl.removeChild(this.masonryEl.firstChild);
+    }
+
+    galleryData.map((piece) => {
+      let pieceEl = $(`<div class="gallery-item">
+                          <div class="thumb">
+                            <img src="obra/3-montanas.png" alt="">
+                          </div>
+                          <div class="data">
+                            <div class="title">3 Montañas</div>
+                            <div class="meta">Autor: Someone</div>
+                          </div>
+                        </div>`);
+      pieceEl.click((ev)=>{
+        console.log('>>>> zoom piece <<<<')
+      });
+      this.masonryEl.appendChild(pieceEl[0]);
+    }).join('');
   }
 
   hide () {

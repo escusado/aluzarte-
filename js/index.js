@@ -1,6 +1,6 @@
 
 var onDomReady = function onDomReady() {
-  var rellax = new Rellax('.rellax');
+
   $('.intro-video').html('<source src="loop.mp4" type="video/mp4">');
 
   axios.get("http://go.javier.xyz:7908/personitas.json").then(res => {
@@ -32,12 +32,6 @@ var onDomReady = function onDomReady() {
   });
 
   window.gallery = new Gallery();
-
-  $('.image-gallery').slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 3
-  });
 };
 
 //on dom ready

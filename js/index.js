@@ -8,10 +8,12 @@ var onDomReady = function onDomReady() {
 
     $('.team-container').html(res.data.map(member => `
       <div class="member">
-        <div class="photo" style="background-image:url('${member.image.url}')"></div>
-        <div class="content">
-          <h4>${member.name}</h4>
-          <p>${member.bio}</p>
+        <div class="member-content">
+          <div class="photo" style="background-image:url('${member.image.url}')"></div>
+          <div class="content">
+            <h4>${member.name}</h4>
+            <p>${member.bio}</p>
+          </div>
         </div>
       </div>
     `).join(''));
